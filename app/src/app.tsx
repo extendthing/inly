@@ -9,6 +9,9 @@
 import React from 'react';
 
 export interface AppProps {
+    /// we need to define which runtime we are using, each application have their approach
+    /// on how to handle the application, like accessing cameras, files, location, sharing, etc.
+    runtime: "webapp" | "electron" | "capacitor"
 }
 
 const App : React.FC<AppProps> = (props) => {
