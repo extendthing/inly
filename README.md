@@ -6,7 +6,7 @@
 
 ## Roadmap
 
-- [*] Web Application (on progress).
+- [x] Web Application (on progress).
 - [ ] Server Application for storing users note data (Planning).
 - [ ] Desktop Application (Planning).
 - [ ] Mobile Application (Planning). 
