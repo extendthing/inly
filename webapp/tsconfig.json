@@ -1,9 +1,16 @@
 {
     "exclude": ["../tsconfig.json"],
     "compilerOptions": {
-        "esModuleInterop": true,
         "jsx": "preserve",
-        "module": "NodeNext",
-        "moduleResolution": "node16"
+        "baseUrl": ".",
+        "paths": {
+            "@app/*": ["../app/src/*"],
+            "@webapp/*": ["*"],
+        }
     },
+    "include": [
+        "**/*.ts",
+        "**/*.tsx",
+        "../app/**/*"
+    ]
 }

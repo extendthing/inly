@@ -4,10 +4,16 @@
  * 
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
+ * 
  */
 
-import { createRoot } from 'react-dom/client';
-import App from "@app/app";
 
-const root = createRoot(document.getElementById('anubis')!);
-root.render(<App/>);
+/**
+ * # LocalStorageAdaptor
+ * A adaptor to store users not to their local storage
+ */
+export function LocalStorageAdaptor(){
+};
+
+export function ApiAdaptor(){
+};

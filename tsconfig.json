@@ -29,8 +29,8 @@
         "resolveJsonModule": true,
         "baseUrl": ".",
         "paths": {
-            "@app/*": ["./app/src/*"],
-            "@webapp/*": ["./webapp/*"],
+            "@app/*": ["app/src/*"],
+            "@webapp/*": ["webapp/*"],
         }
     },
     "include": [
