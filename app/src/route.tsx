@@ -13,6 +13,7 @@ import { RouteObject, createBrowserRouter } from 'react-router';
 import AppLayout from '@app/layout';
 
 /// import views
+import MenuViews from '@app/views/menu';
 
 const route : RouteObject[] = [
     {
@@ -20,7 +21,16 @@ const route : RouteObject[] = [
         element: <AppLayout/>,
         loader: AppLayout?.loader,
         HydrateFallback: AppLayout?.loading,
-        ErrorBoundary: AppLayout?.error
+        ErrorBoundary: AppLayout?.error,
+        children: [
+            {
+                path: "",
+                element: <MenuViews/>,
+                loader: MenuViews?.loader,
+                HydrateFallback: MenuViews?.loading,
+                ErrorBoundary: MenuViews?.error
+            }
+        ]
     }
 ];
 

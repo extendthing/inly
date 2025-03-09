@@ -9,12 +9,16 @@
 import React from 'react';
 import { type AppViews } from '@app/utils/type';
 import { Outlet } from 'react-router';
+import HeaderComponent from './HeaderComponents';
+import FooterComponent from './FooterComponents';
 
 const AppLayout : AppViews  = () => {
     return (<>
+        <HeaderComponent/>
         <main>
             <Outlet/>
         </main>
+        <FooterComponent/>
     </>);
 };
 

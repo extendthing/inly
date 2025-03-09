@@ -11,6 +11,8 @@ import { RuntimeType } from '@app/utils/type';
 import { RuntimeProvider } from '@app/provider/RuntimeProvider';
 import route from '@app/route';
 import { RouterProvider } from 'react-router';
+import '@fontsource/shadows-into-light';
+import '@fontsource-variable/geist';
 import "@app/assets/main.css";
 
 export interface AppProps {

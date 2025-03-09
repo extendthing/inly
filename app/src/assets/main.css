@@ -1,3 +1,118 @@
 @import "tailwindcss";
 @source "../";
 @source "../../../webapp";
+
+@plugin "daisyui" {
+    themes: false;
+}
+
+@plugin "daisyui/theme" {
+    name: "light";
+    default: true;
+    prefersdark: false;
+    color-scheme: light;
+
+    --color-base-100: oklch(96.03% 0.0067 295.45);
+    --color-base-200: oklch(97.31% 0 0);
+    --color-base-300: oklch(100% 0 0);
+    --color-base-content: oklch(13% 0.03 240);
+    
+    --color-primary: oklch(59.85% 0.1973 261.27);
+    --color-primary-content: oklch(98% 0.01 240);
+
+    --color-secondary: oklch(85% 0.12 200);
+    --color-secondary-content: oklch(20% 0.02 200);
+
+    --color-accent: oklch(90% 0.15 160);
+    --color-accent-content: oklch(20% 0.02 160);
+
+    --color-neutral: oklch(80% 0.01 240);
+    --color-neutral-content: oklch(20% 0.02 240);
+
+    --color-info: oklch(85% 0.15 220);
+    --color-info-content: oklch(20% 0.02 220);
+
+    --color-success: oklch(80% 0.2 140);
+    --color-success-content: oklch(20% 0.02 140);
+
+    --color-warning: oklch(90% 0.2 80);
+    --color-warning-content: oklch(20% 0.02 80);
+
+    --color-error: oklch(85% 0.22 30);
+    --color-error-content: oklch(20% 0.02 30);
+
+    --tab-border-color: oklch(59.85% 0.1973 261.27);
+
+    --radius-selector: 0.75rem;
+    --radius-field: 0.45rem;
+    --radius-box: 0.5rem;
+
+    --size-selector: 0.25rem;
+    --size-field: 0.25rem;
+
+    --border: 1px;
+
+    --depth: 1;
+    --noise: 0;
+}
+
+@plugin "daisyui/theme" {
+    name: "dark";
+    default: false;
+    prefersdark: false;
+    color-scheme: dark;
+
+    --color-base-100: oklch(6.72% 0 0);
+    --color-base-200: oklch(20.46% 0 0);
+    --color-base-300: oklch(22.73% 0.0038 286.09);
+    --color-base-content: oklch(98% 0 240);
+    
+    --color-primary: oklch(59.85% 0.1973 261.27);
+    --color-primary-content: oklch(15% 0.01 240);
+
+    --color-secondary: oklch(30% 0.1 200);
+    --color-secondary-content: oklch(85% 0.02 200);
+
+    --color-accent: oklch(35% 0.15 160);
+    --color-accent-content: oklch(85% 0.02 160);
+
+    --color-neutral: oklch(25% 0.05 240);
+    --color-neutral-content: oklch(85% 0.02 240);
+
+    --color-info: oklch(40% 0.15 220);
+    --color-info-content: oklch(85% 0.02 220);
+
+    --color-success: oklch(35% 0.2 140);
+    --color-success-content: oklch(85% 0.02 140);
+
+    --color-warning: oklch(45% 0.2 80);
+    --color-warning-content: oklch(85% 0.02 80);
+
+    --color-error: oklch(40% 0.22 30);
+    --color-error-content: oklch(85% 0.02 30);
+
+    --tab-border-color: oklch(59.85% 0.1973 261.27);
+
+    --radius-selector: 0.75rem;
+    --radius-field: 0.45rem;
+    --radius-box: 0.5rem;
+
+    --size-selector: 0.25rem;
+    --size-field: 0.25rem;
+
+    --border: 1px;
+    --depth: 1;
+    --noise: 0;
+}
+
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+@custom-variant light (&:where([data-theme=light], [data-theme=light] *));
+
+
+html, body, #anubis {
+    font-family: 'Shadows Into Light', cursive, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.font-geist {
+    font-family: 'Geist', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
