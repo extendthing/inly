@@ -7,16 +7,23 @@
  */
 
 import React from 'react';
+import { RuntimeType } from '@app/utils/type';
+import { RuntimeProvider } from '@app/provider/RuntimeProvider';
+import route from '@app/route';
+import { RouterProvider } from 'react-router';
+import "@app/assets/main.css";
 
 export interface AppProps {
     /// we need to define which runtime we are using, each application have their approach
     /// on how to handle the application, like accessing cameras, files, location, sharing, etc.
-    runtime: "webapp" | "electron" | "capacitor"
+    runtime: RuntimeType
 }
 
 const App : React.FC<AppProps> = (props) => {
     return (<>
-        <h1>Hello</h1>
+        <RuntimeProvider runtime={props.runtime}>
+            <RouterProvider router={route} />
+        </RuntimeProvider>
     </>);
 }
 

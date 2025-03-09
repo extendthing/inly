@@ -9,10 +9,11 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import App from "@app/app";
+import { RuntimeType } from '@app/utils/type';
 
 const root = createRoot(document.getElementById('anubis')!);
 root.render(
     <React.StrictMode>
-        <App runtime="webapp" />
+        <App runtime={RuntimeType.webapp} />
     </React.StrictMode>
 );
