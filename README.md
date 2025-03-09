@@ -1,7 +1,16 @@
 # INLY
 
 > [!WARNING]
-> This application currently under active development, feel free to make pr or issue if you find an issue.
+> This application currently under active development, feel free to make a PR or open an issue.
+
+
+## Preview
+
+> [!CAUTION]
+> Preview is not a real finish product, it maybe change on final version.
+
+<img src="./docs/media/sc-dev.png">
+
 
 
 ## Roadmap
