@@ -1,0 +1,25 @@
+{
+    "$schema": "https://turbo.build/schema.json",
+    "globalEnv": [],
+    "cacheDir": ".turbo/cache",
+    "tasks": {
+        "dev": {
+            "cache": false,
+            "persistent": true,
+            "outputLogs": "full",
+            "env": []
+        },
+        "test": {
+            "cache": true,
+            "persistent": false,
+            "outputLogs": "full",
+            "env": []
+        },
+        "build-linux": {
+            "dependsOn": ["test"],
+            "cache": true,
+            "persistent": true,
+            "env": []
+        }
+    }
+}
