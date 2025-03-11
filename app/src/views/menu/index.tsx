@@ -19,7 +19,7 @@ const MenuViews : AppViews = () => {
 
     return (<>
         <div className="w-full h-full min-h-screen flex flex-col items-center justify-center">
-            <h3 className="font-bold text-2xl">Your notes will be saved localy on your browser.</h3>
+            <h1 className="font-bold text-2xl tracking-wider">Your notes will be saved localy on your browser.</h1>
             <div className="w-96 h-full flex flex-col text-xl pt-12 gap-4">
                 <MenuItems keybind="CTRL+O" disabled>
                     <FontAwesomeIcon icon={faShield} />

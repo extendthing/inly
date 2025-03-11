@@ -19,6 +19,7 @@ export const NewVaultModal : React.FC<NewVaultModalProps> = ({ open, toggle }) =
 
     /** State */
     const [vaultName, setVaultName] = React.useState("");
+    const [vaultPassword, setVaultPassword] = React.useState("");
 
     const handleCloseEv = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -36,15 +37,29 @@ export const NewVaultModal : React.FC<NewVaultModalProps> = ({ open, toggle }) =
                 opacity: open ? 100 : 0,
             }}
             transition={{ delay: 0.05 }}
-            className="modal modal-open"
+            className="modal"
         >
-            <div className="modal-box rounded-md">
-                <form className="flex flex-col gap-3">
+            <div className="modal-box bg-base-200 rounded-md">
+                <h3 className="text-3xl font-bold">New Vault</h3>
+                <p className="text-gray-400 dark:text-gray-200/70">Vault is a secure workspace for organizing and storing notes.</p>
+                <form className="flex flex-col gap-3 pt-3">
                     <Input
+                        label="Vault Name"
                         value={vaultName}
                         onChange={(e) => setVaultName(e.target.value)}
                         placeholder="Vault Name"
+                        required
                     />
+                    <Input
+                        label="Vault Password"
+                        value={vaultPassword}
+                        onChange={(e) => setVaultPassword(e.target.value)}
+                        placeholder="Vault Password"
+                        type="password"
+                    />
+                    <button className="btn btn-primary w-full text-base-content">
+                        <span>Create</span>
+                    </button>
                 </form>
             </div>
             <form onSubmit={handleCloseEv} className="modal-backdrop">
