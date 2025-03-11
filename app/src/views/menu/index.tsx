@@ -11,9 +11,12 @@ import { type AppViews } from '@app/utils/type';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleQuestion, faTent, faShield } from '@fortawesome/free-solid-svg-icons';
 import MenuItems from './components/MenuItemsComponents';
+import { NewVaultModal } from '@app/components/vault';
 
 
 const MenuViews : AppViews = () => {
+    const [newVault, setNewVault] = React.useState(false);
+
     return (<>
         <div className="w-full h-full min-h-screen flex flex-col items-center justify-center">
             <h3 className="font-bold text-2xl">Your notes will be saved localy on your browser.</h3>
@@ -22,7 +25,7 @@ const MenuViews : AppViews = () => {
                     <FontAwesomeIcon icon={faShield} />
                     <span>Open Vault</span>
                 </MenuItems>
-                <MenuItems keybind="CTRL+N">
+                <MenuItems keybind="CTRL+N" onClick={() => setNewVault(!newVault)}>
                     <FontAwesomeIcon icon={faShield} />
                     <span>Create Vault</span>
                 </MenuItems>
@@ -36,6 +39,7 @@ const MenuViews : AppViews = () => {
                 </MenuItems>
             </div>
         </div>
+        <NewVaultModal open={newVault} toggle={() => setNewVault(!newVault)} />
     </>);
 }
 

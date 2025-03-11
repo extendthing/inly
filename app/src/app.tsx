@@ -13,6 +13,7 @@ import route from '@app/route';
 import { RouterProvider } from 'react-router';
 import '@fontsource/shadows-into-light';
 import '@fontsource-variable/geist';
+import '@fontsource/schoolbell';
 import "@app/assets/main.css";
 
 export interface AppProps {
