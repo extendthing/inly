@@ -2,6 +2,6 @@
     "name": "webapp",
     "type": "module",
     "scripts": {
-        "dev": "vite dev"
+        "dev": "next dev --turbopack"
     }
 }

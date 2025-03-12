@@ -1,17 +1,43 @@
 {
-    "exclude": ["../tsconfig.json"],
+    "extends": "../tsconfig.json",
     "compilerOptions": {
+        "target": "ES2017",
+        "lib": [
+            "dom",
+            "dom.iterable",
+            "esnext"
+        ],
+        "allowJs": true,
+        "skipLibCheck": true,
+        "strict": false,
+        "noEmit": true,
+        "incremental": true,
+        "module": "esnext",
         "esModuleInterop": true,
+        "moduleResolution": "node",
+        "resolveJsonModule": true,
+        "isolatedModules": true,
         "jsx": "preserve",
+        "plugins": [
+            {
+                "name": "next"
+            }
+        ],
         "baseUrl": ".",
         "paths": {
-            "@app/*": ["../app/src/*"],
-            "@webapp/*": ["*"],
+            "@app/*": [
+                "../app/src/*"
+            ],
+            "@webapp/*": ["src/*"],
         }
     },
     "include": [
+        "next-env.d.ts",
+        ".next/types/**/*.ts",
         "**/*.ts",
-        "**/*.tsx",
-        "../app/**/*"
+        "**/*.tsx"
+    ],
+    "exclude": [
+        "node_modules"
     ]
 }
