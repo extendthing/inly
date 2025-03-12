@@ -12,11 +12,19 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleQuestion, faTent, faShield } from '@fortawesome/free-solid-svg-icons';
 import MenuItems from './components/MenuItemsComponents';
 import { NewVaultModal } from '@app/components/vault';
+import Database from '@app/libs/db';
+import createLocalStorage from '@app/libs/db/wrapper/localstorage';
+import { useRuntime } from '@app/provider/RuntimeProvider';
 
 
 const MenuViews : AppViews = () => {
     const [newVault, setNewVault] = React.useState(false);
+    const { appKey } = useRuntime();
 
+    React.useEffect(() => {
+        const db = new Database(createLocalStorage(appKey));
+    }, []);
+    
     return (<>
         <div className="w-full h-full min-h-screen flex flex-col items-center justify-center">
             <h1 className="font-bold text-2xl tracking-wider">Your notes will be saved localy on your browser.</h1>

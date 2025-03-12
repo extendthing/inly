@@ -37,7 +37,7 @@ export const NewVaultModal : React.FC<NewVaultModalProps> = ({ open, toggle }) =
                 opacity: open ? 100 : 0,
             }}
             transition={{ delay: 0.05 }}
-            className="modal"
+            className="modal modal-open"
         >
             <div className="modal-box bg-base-200 rounded-md">
                 <h3 className="text-3xl font-bold">New Vault</h3>

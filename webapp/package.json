@@ -2,6 +2,6 @@
     "name": "webapp",
     "type": "module",
     "scripts": {
-        "dev": "next dev --turbopack"
+        "dev": "next dev --turbopack --port 8000"
     }
 }

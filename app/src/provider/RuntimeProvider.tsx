@@ -11,14 +11,16 @@ import { RuntimeType } from '@app/utils/type';
 
 interface RuntimeContext {
     runtime: RuntimeType
+    appKey?: string
 };
 
 const RuntimeContext = React.createContext({} as RuntimeContext);
 
-export const RuntimeProvider : React.FC<{ runtime: RuntimeType, children: React.ReactNode }> = ({ runtime, children }) => {
+export const RuntimeProvider : React.FC<{ runtime: RuntimeType, children: React.ReactNode, appKey?: string }> = ({ runtime, appKey, children }) => {
     
     const state = {
-        runtime
+        runtime,
+        appKey
     } satisfies RuntimeContext;
 
     return (<>

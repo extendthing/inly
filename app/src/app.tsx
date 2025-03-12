@@ -20,11 +20,12 @@ export interface AppProps {
     /// we need to define which runtime we are using, each application have their approach
     /// on how to handle the application, like accessing cameras, files, location, sharing, etc.
     runtime: RuntimeType
+    appKey?: string
 }
 
 const App : React.FC<AppProps> = (props) => {
     return (<>
-        <RuntimeProvider runtime={props.runtime}>
+        <RuntimeProvider runtime={props.runtime} appKey={props.appKey}>
             <RouterProvider router={route} />
         </RuntimeProvider>
     </>);
